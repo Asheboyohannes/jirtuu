@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@drawable/assistant_button"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Edit Friendly Name"
+        android:textColor="@color/black_color"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/primary_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:padding="10dp"
+        android:text="Friendly Name"
+        android:textColor="@color/primary_color" />
+
+    <EditText
+        android:id="@+id/efnam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/assistant_button"
+        android:hint="Write your text here"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Forward Enabled"
+                android:textColor="@color/primary_color" />
+
+
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/frwardenabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"/>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:padding="10dp"
+
+
+                android:text="Forward Type"
+                android:textColor="@color/primary_color" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rexternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:text="External"
+                    android:textColor="@color/black_color" />
+
+                <RadioButton
+                    android:id="@+id/rvoicemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:text="Voicemail"
+                    android:textColor="@color/black_color" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labeltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:padding="10dp"
+        android:text="External Number"
+        android:textColor="@color/primary_color" />
+
+    <LinearLayout
+        android:id="@+id/exter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/assistant_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/countrypick"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="10dp"
+        android:src="@drawable/dropdown"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"/>
+
+    <EditText
+        android:id="@+id/external_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+      android:background="@color/white_color"
+        android:hint="Write your external number here"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:maxLines="1"
+
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black_color" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="In case your jirtuu number is out of reach due to poor internet connectivity, you can enable to external number for call forwarding. Forwarding to same area code of your jirtuu’s number, or any USA and Canada number is free."
+        android:padding="5dp"
+        android:textSize="10sp"
+        android:textColor="@color/primary_dark_color"/>
+
+    <Button
+        android:id="@+id/updateenam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/assistant_button"
+        android:text="Update"
+        android:textColor="@color/black_color" />
+
+</LinearLayout>

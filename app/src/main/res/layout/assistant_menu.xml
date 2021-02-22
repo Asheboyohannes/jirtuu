@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundColor">
+
+    <fragment
+        android:id="@+id/status"
+        android:name="org.linphone.fragments.StatusBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        tools:layout="@layout/status_bar" />
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/assistant_topbar"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/standard_text_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/welcome"
+                android:padding="16dp"
+
+                android:textAllCaps="true" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/mylogo"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                style="@style/standard_small_text_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_gravity="top"
+                android:textColor="@color/black_color"
+                android:autoLink="web"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:text="Your Account Information. You provide your mobile phone number to create a account. You provide us the phone numbers in your mobile address book on a regular basis, including those of both the users of our Services and your other contacts. You confirm you are authorized to provide us such numbers. JirtuuMobile OTT Mobile Dialer uploads your Phone book contacts to https://jirtutech.com in order to find out your friendly contacts in JirtuuMobile OTT Mobile Dialer. This enables you to connect with your friends, families and others who are already registered in JirtuuMobile OTT Mobile Dialer. Please note that we are not disturbing your Phone book contacts to any third party. Nor, we are using it for any other purpose than stated above." />
+
+
+            <TextView
+                android:id="@+id/join"
+                style="@style/button_font"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/assistant_button"
+                android:textColor="@drawable/assistant_button_text_color"
+                android:contentDescription="@string/assistant_create_account"
+                android:text="JOIN" />
+
+
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:columnCount="1">
+
+                <TextView
+                    android:id="@+id/account_creation"
+                    style="@style/button_font"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_margin="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/assistant_button"
+                    android:textColor="@drawable/assistant_button_text_color"
+                    android:contentDescription="@string/assistant_create_account"
+                    android:text="@string/assistant_create_account" />
+
+                <TextView
+                    android:id="@+id/account_connection"
+                    style="@style/button_font"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_margin="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/assistant_button"
+                    android:textColor="@drawable/assistant_button_text_color"
+                    android:contentDescription="@string/assistant_login_linphone"
+                    android:text="@string/assistant_login_linphone" />
+
+                <TextView
+                    android:id="@+id/generic_connection"
+                    style="@style/button_font"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_margin="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/assistant_button"
+                    android:textColor="@drawable/assistant_button_text_color"
+                    android:contentDescription="@string/assistant_login_generic"
+                    android:text="@string/assistant_login_generic" />
+
+                <TextView
+                    android:id="@+id/remote_configuration"
+                    style="@style/button_font"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_margin="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/assistant_button"
+                    android:textColor="@drawable/assistant_button_text_color"
+                    android:contentDescription="@string/assistant_remote_provisioning"
+                    android:text="@string/assistant_remote_provisioning" />
+
+            </GridLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
