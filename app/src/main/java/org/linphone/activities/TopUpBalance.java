@@ -107,7 +107,7 @@ public class TopUpBalance extends AppCompatActivity {
                             stripe =
                                     new Stripe(
                                             TopUpBalance.this,
-                                            Constants.STRIPE_PUBLISHABLE_KEY_TEST);
+                                            Constants.STRIPE_PUBLISHABLE_KEY_LIVE);
                             stripe.createToken(
                                     cardToSave,
                                     new TokenCallback() {

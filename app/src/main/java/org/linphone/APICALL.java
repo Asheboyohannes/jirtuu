@@ -226,11 +226,6 @@ public class APICALL {
         return null;
     }
 
-
-
-
-    
-
     public String getAvailableNumber(JSONObject jObjectType, String Token) {
         final MediaType mediaType = MediaType.parse("application/json");
         OkHttpClient httpClient = new OkHttpClient();

@@ -16,7 +16,7 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         applicationInstance = this;
-        PaymentConfiguration.init(Constants.STRIPE_PUBLISHABLE_KEY_TEST);
+        PaymentConfiguration.init(Constants.STRIPE_PUBLISHABLE_KEY_LIVE);
     }
 
     @Override
