@@ -120,6 +120,7 @@ public class TopUpBalance extends AppCompatActivity {
                                                         "email", emailEnter.getText().toString());
                                                 StripeObject.put(
                                                         "amount", AmountShow.getText().toString());
+                                                StripeObject.put("live", true);
                                             } catch (JSONException e) {
                                                 e.printStackTrace();
                                             }
